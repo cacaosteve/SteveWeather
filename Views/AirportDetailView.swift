@@ -19,7 +19,7 @@ struct AirportDetailView: View {
                 Group {
                     Toggle("Show Forecast", isOn: $showForecast)
                     
-                    Text(showForecast ? "Showing Forecast" : "Showing Conditions")
+                    Text(showForecast ? "Showing Forecast" : "Showing Current Conditions")
                         .font(.title)
                     
                     Text(airport.identifierCode ?? "")
