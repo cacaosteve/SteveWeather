@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AAD7DE9226ACED2F00494E1F /* SteveWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DE9126ACED2F00494E1F /* SteveWeatherApp.swift */; };
-		AAD7DE9426ACED2F00494E1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DE9326ACED2F00494E1F /* ContentView.swift */; };
 		AAD7DE9626ACED3100494E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DE9526ACED3100494E1F /* Assets.xcassets */; };
 		AAD7DE9926ACED3100494E1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DE9826ACED3100494E1F /* Preview Assets.xcassets */; };
 		AAD7DE9B26ACED3100494E1F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DE9A26ACED3100494E1F /* Persistence.swift */; };
@@ -20,13 +19,8 @@
 		AAD7DF0726AD151900494E1F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DF0626AD151900494E1F /* Weather.swift */; };
 		AAD7DF4526ADD21700494E1F /* AirportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DF4426ADD21700494E1F /* AirportList.swift */; };
 		AAD7DF4726ADE6B600494E1F /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DF4626ADE6B600494E1F /* AirportDetailView.swift */; };
-		AAE0228026AF44B6003D85FD /* JSONViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0227F26AF44B6003D85FD /* JSONViewModel.swift */; };
-		AAE0228F26AFBBA0003D85FD /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE0228426AFBBA0003D85FD /* Airport.m */; };
-		AAE0229026AFBBA0003D85FD /* _Report.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE0228626AFBBA0003D85FD /* _Report.m */; };
-		AAE0229126AFBBA0003D85FD /* _Conditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE0228826AFBBA0003D85FD /* _Conditions.m */; };
-		AAE0229226AFBBA0003D85FD /* Conditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE0228926AFBBA0003D85FD /* Conditions.m */; };
-		AAE0229326AFBBA0003D85FD /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE0228B26AFBBA0003D85FD /* Report.m */; };
-		AAE0229426AFBBA0003D85FD /* _Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE0228D26AFBBA0003D85FD /* _Airport.m */; };
+		AAE022AC26B0BBA8003D85FD /* ReportFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE022AB26B0BBA8003D85FD /* ReportFetcher.swift */; };
+		AAE022AF26B0C00B003D85FD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAE022AE26B0C00B003D85FD /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +43,6 @@
 /* Begin PBXFileReference section */
 		AAD7DE8E26ACED2F00494E1F /* SteveWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteveWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD7DE9126ACED2F00494E1F /* SteveWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteveWeatherApp.swift; sourceTree = "<group>"; };
-		AAD7DE9326ACED2F00494E1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AAD7DE9526ACED3100494E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD7DE9826ACED3100494E1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AAD7DE9A26ACED3100494E1F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -66,20 +59,7 @@
 		AAD7DF0626AD151900494E1F /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		AAD7DF4426ADD21700494E1F /* AirportList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportList.swift; sourceTree = "<group>"; };
 		AAD7DF4626ADE6B600494E1F /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
-		AAE0227F26AF44B6003D85FD /* JSONViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONViewModel.swift; sourceTree = "<group>"; };
-		AAE0228226AFBB9F003D85FD /* SteveWeather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SteveWeather-Bridging-Header.h"; sourceTree = "<group>"; };
-		AAE0228326AFBBA0003D85FD /* Airport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Airport.h; path = SteveWeather/Model/Airport.h; sourceTree = SOURCE_ROOT; };
-		AAE0228426AFBBA0003D85FD /* Airport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Airport.m; path = SteveWeather/Model/Airport.m; sourceTree = SOURCE_ROOT; };
-		AAE0228526AFBBA0003D85FD /* Conditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conditions.h; path = SteveWeather/Model/Conditions.h; sourceTree = SOURCE_ROOT; };
-		AAE0228626AFBBA0003D85FD /* _Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Report.m; path = SteveWeather/Model/_Report.m; sourceTree = SOURCE_ROOT; };
-		AAE0228726AFBBA0003D85FD /* _Conditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Conditions.h; path = SteveWeather/Model/_Conditions.h; sourceTree = SOURCE_ROOT; };
-		AAE0228826AFBBA0003D85FD /* _Conditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Conditions.m; path = SteveWeather/Model/_Conditions.m; sourceTree = SOURCE_ROOT; };
-		AAE0228926AFBBA0003D85FD /* Conditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conditions.m; path = SteveWeather/Model/Conditions.m; sourceTree = SOURCE_ROOT; };
-		AAE0228A26AFBBA0003D85FD /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Report.h; path = SteveWeather/Model/Report.h; sourceTree = SOURCE_ROOT; };
-		AAE0228B26AFBBA0003D85FD /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Report.m; path = SteveWeather/Model/Report.m; sourceTree = SOURCE_ROOT; };
-		AAE0228C26AFBBA0003D85FD /* _Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Report.h; path = SteveWeather/Model/_Report.h; sourceTree = SOURCE_ROOT; };
-		AAE0228D26AFBBA0003D85FD /* _Airport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Airport.m; path = SteveWeather/Model/_Airport.m; sourceTree = SOURCE_ROOT; };
-		AAE0228E26AFBBA0003D85FD /* _Airport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Airport.h; path = SteveWeather/Model/_Airport.h; sourceTree = SOURCE_ROOT; };
+		AAE022AB26B0BBA8003D85FD /* ReportFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE022AF26B0C00B003D85FD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +91,9 @@
 		AAD7DE8526ACED2F00494E1F = {
 			isa = PBXGroup;
 			children = (
-				AAE0228126AFBB93003D85FD /* Model */,
+				AAE022B126B0FEDB003D85FD /* Views */,
+				AAE022B026B0FEC0003D85FD /* Core Data */,
+				AAE0228126AFBB93003D85FD /* Network */,
 				AAD7DE9026ACED2F00494E1F /* SteveWeather */,
 				AAD7DEA726ACED3100494E1F /* SteveWeatherTests */,
 				AAD7DEB226ACED3100494E1F /* SteveWeatherUITests */,
@@ -132,17 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				AAD7DE9126ACED2F00494E1F /* SteveWeatherApp.swift */,
-				AAD7DE9326ACED2F00494E1F /* ContentView.swift */,
-				AAD7DF4426ADD21700494E1F /* AirportList.swift */,
-				AAD7DF4626ADE6B600494E1F /* AirportDetailView.swift */,
-				AAD7DEC626AD0AFF00494E1F /* AirportRow.swift */,
-				AAD7DEC826AD0C1100494E1F /* AddAirport.swift */,
-				AAD7DF0626AD151900494E1F /* Weather.swift */,
-				AAE0227F26AF44B6003D85FD /* JSONViewModel.swift */,
 				AAD7DE9526ACED3100494E1F /* Assets.xcassets */,
-				AAD7DE9A26ACED3100494E1F /* Persistence.swift */,
 				AAD7DE9F26ACED3100494E1F /* Info.plist */,
-				AAD7DE9C26ACED3100494E1F /* SteveWeather.xcdatamodeld */,
 				AAD7DE9726ACED3100494E1F /* Preview Content */,
 			);
 			path = SteveWeather;
@@ -174,24 +148,33 @@
 			path = SteveWeatherUITests;
 			sourceTree = "<group>";
 		};
-		AAE0228126AFBB93003D85FD /* Model */ = {
+		AAE0228126AFBB93003D85FD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				AAE0228E26AFBBA0003D85FD /* _Airport.h */,
-				AAE0228D26AFBBA0003D85FD /* _Airport.m */,
-				AAE0228726AFBBA0003D85FD /* _Conditions.h */,
-				AAE0228826AFBBA0003D85FD /* _Conditions.m */,
-				AAE0228C26AFBBA0003D85FD /* _Report.h */,
-				AAE0228626AFBBA0003D85FD /* _Report.m */,
-				AAE0228326AFBBA0003D85FD /* Airport.h */,
-				AAE0228426AFBBA0003D85FD /* Airport.m */,
-				AAE0228526AFBBA0003D85FD /* Conditions.h */,
-				AAE0228926AFBBA0003D85FD /* Conditions.m */,
-				AAE0228A26AFBBA0003D85FD /* Report.h */,
-				AAE0228B26AFBBA0003D85FD /* Report.m */,
-				AAE0228226AFBB9F003D85FD /* SteveWeather-Bridging-Header.h */,
+				AAE022AB26B0BBA8003D85FD /* ReportFetcher.swift */,
+				AAD7DF0626AD151900494E1F /* Weather.swift */,
 			);
-			path = Model;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AAE022B026B0FEC0003D85FD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				AAD7DE9C26ACED3100494E1F /* SteveWeather.xcdatamodeld */,
+				AAD7DE9A26ACED3100494E1F /* Persistence.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		AAE022B126B0FEDB003D85FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAD7DF4426ADD21700494E1F /* AirportList.swift */,
+				AAD7DF4626ADE6B600494E1F /* AirportDetailView.swift */,
+				AAD7DEC626AD0AFF00494E1F /* AirportRow.swift */,
+				AAD7DEC826AD0C1100494E1F /* AddAirport.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +193,9 @@
 			dependencies = (
 			);
 			name = SteveWeather;
+			packageProductDependencies = (
+				AAE022AE26B0C00B003D85FD /* Alamofire */,
+			);
 			productName = SteveWeather;
 			productReference = AAD7DE8E26ACED2F00494E1F /* SteveWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -282,6 +268,9 @@
 				Base,
 			);
 			mainGroup = AAD7DE8526ACED2F00494E1F;
+			packageReferences = (
+				AAE022AD26B0C00B003D85FD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AAD7DE8F26ACED2F00494E1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -324,20 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE0229126AFBBA0003D85FD /* _Conditions.m in Sources */,
+				AAE022AC26B0BBA8003D85FD /* ReportFetcher.swift in Sources */,
 				AAD7DEC726AD0AFF00494E1F /* AirportRow.swift in Sources */,
 				AAD7DF4526ADD21700494E1F /* AirportList.swift in Sources */,
-				AAE0229326AFBBA0003D85FD /* Report.m in Sources */,
 				AAD7DE9E26ACED3100494E1F /* SteveWeather.xcdatamodeld in Sources */,
-				AAE0229426AFBBA0003D85FD /* _Airport.m in Sources */,
 				AAD7DE9B26ACED3100494E1F /* Persistence.swift in Sources */,
-				AAE0229226AFBBA0003D85FD /* Conditions.m in Sources */,
 				AAD7DEC926AD0C1100494E1F /* AddAirport.swift in Sources */,
 				AAD7DF4726ADE6B600494E1F /* AirportDetailView.swift in Sources */,
-				AAE0228026AF44B6003D85FD /* JSONViewModel.swift in Sources */,
-				AAE0229026AFBBA0003D85FD /* _Report.m in Sources */,
-				AAE0228F26AFBBA0003D85FD /* Airport.m in Sources */,
-				AAD7DE9426ACED2F00494E1F /* ContentView.swift in Sources */,
 				AAD7DE9226ACED2F00494E1F /* SteveWeatherApp.swift in Sources */,
 				AAD7DF0726AD151900494E1F /* Weather.swift in Sources */,
 			);
@@ -509,7 +491,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evapingnow.swiftvideo.SteveWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Model/SteveWeather-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -534,7 +515,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evapingnow.swiftvideo.SteveWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Model/SteveWeather-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -664,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAE022AD26B0C00B003D85FD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAE022AE26B0C00B003D85FD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAE022AD26B0C00B003D85FD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AAD7DE9C26ACED3100494E1F /* SteveWeather.xcdatamodeld */ = {

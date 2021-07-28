@@ -9,15 +9,12 @@
 //import CoreData
 //
 //class JSONViewModel: ObservableObject {
-//    @Published var videos: [VideoModel] = []
+//    @Published var airports: [AirportModel] = []
 //    
 //    func saveData(context: NSManagedObjectContext) {
-//        videos.forEach { (data) in
-//            let entity = Video(context: context)
-//            entity.titleName = data.titleName
-//            entity.detail = data.detail
-//            entity.link = data.link
-//            entity.imageLink = data.imageLink
+//        airports.forEach { (data) in
+//            let entity = Airport(context: context)
+//            entity.identifierCode = data.identifierCode
 //        }
 //        
 //        do {
@@ -28,8 +25,8 @@
 //        }
 //    }
 //    
-//    func fetchData(context: NSManagedObjectContext) {
-//        let url = "https://mockend.com/cacaosteve/videosapi/videos"
+//    func fetchData(context: NSManagedObjectContext, airportCode: String) {
+//        let url = "https://qa.foreflight.com/weather/report/\(airportCode)"
 //        
 //        var request = URLRequest(url: URL(string: url)!)
 //        request.addValue("swiftui2.0", forHTTPHeaderField: "field")
@@ -47,11 +44,10 @@
 //            }
 //            
 //            do {
-//                let videos = try JSONDecoder().decode([VideoModel].self, from: jsonData)
+//                let airport = try JSONDecoder().decode(AirportModel.self, from: jsonData)
 //                
 //                DispatchQueue.main.async {
-//                    self.videos = videos
-//                    
+//                    self.airports = airports.append(airport)
 //                    self.saveData(context: context)
 //                }
 //            }

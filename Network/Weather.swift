@@ -14,42 +14,32 @@ struct Weather: Codable {
 struct Report: Codable {
     let conditions: Conditions?
     let forecast: ReportForecast?
-    let windsAloft: ReportWindsAloft?
-    let mos: MOS?
+//    let windsAloft: ReportWindsAloft?
+//    let mos: MOS?
 }
 
 // MARK: - Conditions
 struct Conditions: Codable {
     let text, ident: String?
-    let dateIssued: Date?
+//    let dateIssued: Date
     let lat, lon: Double?
     let elevationFt, tempC, dewpointC: Int?
     let pressureHg: Double?
     let densityAltitudeFt, relativeHumidity: Int?
-    let flightRules: FlightRules?
-    let cloudLayers, cloudLayersV2: [CloudLayer]?
-    let weather: [JSONAny]?
+    let flightRules: String?
+    let cloudLayers: [CloudLayer]?
+//    let cloudLayersV2: CloudLayer?
+//    let weather: [JSONAny]?
     let visibility: ConditionsVisibility?
     let wind: ConditionsWind?
 }
 
 // MARK: - CloudLayer
 struct CloudLayer: Codable {
-    let coverage: Coverage?
+    let coverage: String?
     let altitudeFt: Int?
     let ceiling: Bool?
-    let altitudeQualifier: Int?
-}
-
-enum Coverage: String, Codable {
-    case bkn = "bkn"
-    case few = "few"
-    case sct = "sct"
-}
-
-enum FlightRules: String, Codable {
-    case ifr = "ifr"
-    case vfr = "vfr"
+//    let altitudeQualifier: Int?
 }
 
 // MARK: - ConditionsVisibility
@@ -59,33 +49,38 @@ struct ConditionsVisibility: Codable {
 
 // MARK: - ConditionsWind
 struct ConditionsWind: Codable {
-    let speedKts, direction, variableFrom, variableTo: Int?
-    let from, to: Int?
+    let speedKts: Double?
+    let direction: Int?
+//    let speedKts, direction, variableFrom, variableTo: Int?
+    let from: Int?
+//    let from, to: Int?
     let variable: Bool?
 }
 
 // MARK: - ReportForecast
 struct ReportForecast: Codable {
     let text, ident: String?
-    let dateIssued: Date?
-    let period: Period?
-    let lat, lon: Double?
-    let elevationFt: Int?
+//    let dateIssued: Date?
+//    let period: Period?
+//    let lat, lon: Double?
+//    let elevationFt: Int?
     let conditions: [PurpleCondition]?
 }
 
 // MARK: - PurpleCondition
 struct PurpleCondition: Codable {
     let text: String?
-    let dateIssued: Date?
-    let lat, lon: Double?
-    let elevationFt, relativeHumidity: Int?
-    let flightRules: FlightRules?
-    let cloudLayers, cloudLayersV2: [CloudLayer]?
-    let weather: [JSONAny]?
+//    let dateIssued: Date?
+//    let lat, lon: Double?
+    let relativeHumidity: Int?
+//    let elevationFt, relativeHumidity: Int?
+    let flightRules: String?
+//    let cloudLayers: [CloudLayer]?
+//    let cloudLayers, cloudLayersV2: [CloudLayer]?
+//    let weather: [JSONAny]?
     let visibility: PurpleVisibility?
-    let wind: ConditionWind?
-    let period: Period?
+//    let wind: ConditionWind?
+//    let period: Period?
 }
 
 // MARK: - Period
@@ -108,8 +103,8 @@ struct ConditionWind: Codable {
 // MARK: - MOS
 struct MOS: Codable {
     let station: String?
-    let issued: Date?
-    let period: Period?
+//    let issued: Date?
+//    let period: Period?
     let latitude, longitude: Double?
     let forecast: MOSForecast?
 }
@@ -117,8 +112,8 @@ struct MOS: Codable {
 // MARK: - MOSForecast
 struct MOSForecast: Codable {
     let text, ident: String?
-    let dateIssued: Date?
-    let period: Period?
+//    let dateIssued: Date?
+//    let period: Period?
     let lat, lon: Double?
     let elevationFt: Int?
     let conditions: [FluffyCondition]?
@@ -128,12 +123,12 @@ struct MOSForecast: Codable {
 struct FluffyCondition: Codable {
     let text: String?
     let tempMinC, tempMaxC, dewpointMinC, dewpointMaxC: Double?
-    let flightRules: FlightRules?
+    let flightRules: String?
     let cloudLayers, cloudLayersV2: [CloudLayer]?
-    let weather: [JSONAny]?
+//    let weather: [JSONAny]?
     let visibility: FluffyVisibility?
     let wind: ConditionWind?
-    let period: Period?
+//    let period: Period?
     let turbulence, icing: [JSONAny]?
 }
 
@@ -145,15 +140,15 @@ struct FluffyVisibility: Codable {
 // MARK: - ReportWindsAloft
 struct ReportWindsAloft: Codable {
     let lat, lon: Double?
-    let dateIssued: Date?
+//    let dateIssued: Date?
     let windsAloft: [WindsAloftElement]?
     let source: String?
 }
 
 // MARK: - WindsAloftElement
 struct WindsAloftElement: Codable {
-    let validTime: Date?
-    let period: Period?
+//    let validTime: Date?
+//    let period: Period?
     let windTemps: [String: WindTemp]?
 }
 
@@ -174,6 +169,10 @@ class JSONNull: Codable, Hashable {
     public var hashValue: Int {
         return 0
     }
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(index)
+//        hasher.combine(title)
+//    }
 
     public init() {}
 
